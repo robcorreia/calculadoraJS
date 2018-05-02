@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" type="text/css" href="formata-includes-funcoes.css"> 
+  <title> Funções de usuário em PHP </title> 
+
+ 
+</head> 
+
+<body>
+<h1> JS com Função</h1>
+<label> Valor de X</label>
+<input type="text" id="txtvalorx"/>
+<br>
+<label> Valor de Y</label>
+<input type="text" id="txtvalory"/>
+<br><br>
+
+<button type="button" onclick="somar()">+
+</button>
+
+<button type="button" onclick="subtrair()">-
+</button>
+
+<button type="button" onclick="multiplicar()">*
+</button>
+
+<button type="button" onclick="dividir()">/
+</button>
+
+
+
+<p id="p">
+
+
+ <script type="text/javascript"> 
+
+ 	var n1 = document.querySelector('#txtvalorx');
+ 	var n2 = document.querySelector('#txtvalory');
+
+
+
+  	function multiplicar(){
+  		var mult= parseFloat(n1.value)* parseFloat(n2.value);
+  		document.querySelector('#p').innerHTML = ("Resultado é: "+mult);
+  	}
+
+  	function subtrair(){
+  		var subtrair= parseFloat(n1.value)- parseFloat(n2.value);
+  		document.querySelector('#p').innerHTML = ("Resultado é: "+subtrair);
+  	}
+  	function somar(){
+  		var adicao= parseFloat(n1.value)+ parseFloat(n2.value);
+  		document.querySelector('#p').innerHTML = ("Resultado é: "+adicao);
+  	}
+  	function dividir(){
+
+  		if(n1.value > n2.value){
+  		var divisao= parseFloat(n1.value) / parseFloat(n2.value);
+  		}else if(n1.value < n2.value){
+  		var divisao = parseFloat(n2.value) / parseFloat(n1.value);
+  		}
+  		
+  		document.querySelector('#p').innerHTML = ("Resultado é: "+divisao);
+
+  	}
+
+
+  </script>
+</body> 
+</html> 
